@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layoutDirection="rtl"
+    android:padding="12dp">
+
+    <ImageView
+        android:id="@+id/preview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#EEEEEE"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:text="اختر صورة للبدء"
+        android:textSize="15sp" />
+
+    <CheckBox
+        android:id="@+id/suitBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="إلباس بدلة وكرافتة" />
+
+    <RadioGroup
+        android:id="@+id/tplGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RadioButton
+            android:id="@+id/tplTransaction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="قالب المعاملات: 9 صور (3×4.3 سم)" />
+        <RadioButton
+            android:id="@+id/tplPassport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="قالب الجواز: 6 صور (3.5×4.5 سم)، 5 + 1" />
+    </RadioGroup>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="تنعيم البشرة" />
+    <SeekBar android:id="@+id/smoothBar" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:max="100" android:progress="50" />
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="الإضاءة" />
+    <SeekBar android:id="@+id/lightBar" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:max="100" android:progress="50" />
+
+    <Button android:id="@+id/pickBtn" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="1) اختيار صورة وتجهيزها" />
+    <Button android:id="@+id/saveBtn" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="2) حفظ ورقة A4 في الهاتف" />
+</LinearLayout>
